@@ -38,7 +38,7 @@ module.exports = {
 		amoy: {
 		  url: "https://rpc-amoy.polygon.technology/",
 		  accounts: [`0x${process.env.PRIVATE_KEY}`],
-		  gas: 20000000,
+		  gasPrice: 25000000000,
 		},
 	  },
 };
