@@ -41,7 +41,7 @@ export const requestAccount = async (metaMask) => {
 			}
 			await provider.request({
 				method: "wallet_switchEthereumChain",
-				params: [{ chainId: "0x56b29" }], // chainId must be in hexadecimal numbers
+				params: [{ chainId: "0x13882" }], // chainId must be in hexadecimal numbers
 			});
 			await provider.request({
 				method: "eth_requestAccounts",
@@ -74,15 +74,15 @@ export const isConnected = async () => {
 	  if (window.ethereum) {
 		let chainId = await window.ethereum.request({ method: 'eth_chainId' });
 		console.log("Initial chainId:", chainId);
-		if (chainId !== '0x56b29') {
+		if (chainId !== '0x13882') {
 		  await window.ethereum.request({
 			method: "wallet_switchEthereumChain",
-			params: [{ chainId: "0x56b29" }],
+			params: [{ chainId: "0x13882" }],
 		  });
 		  chainId = await window.ethereum.request({ method: 'eth_chainId' });
 		  console.log("Switched chainId:", chainId);
 		}
-		if (chainId === '0x56b29') {
+		if (chainId === '0x13882') {
 		  const provider = new ethers.providers.Web3Provider(window.ethereum);
 		  await provider.send("eth_requestAccounts", []);
 		  return { success: true };
