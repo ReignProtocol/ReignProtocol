@@ -62,7 +62,7 @@ const Invest = () => {
 				//
 				//
 				//
-				setKycStatus(false);
+				setKycStatus(true);
 				//
 				//
 				//
