@@ -19,8 +19,8 @@ import {
 	openFileInNewTab,
 	storeJSONData,
 } from "../services/Helpers/skynetIPFS";
-const tokenAddress = "0x4826533B4897376654Bb4d4AD88B7faFD0C98528";
-const NFT_minter = "0x0E801D84Fa97b50751Dbf25036d067dCf18858bF";
+const tokenAddress = "0x9780D98A88Be8973017d9039071153b0DE67Af79";
+const NFT_minter = "0xc220f833A712ae46930dE531c81A026B4F052b3e";
 
 //metadata to ipfs
 const pinJSONToIPFS = async (JSONBody) => {

@@ -470,8 +470,19 @@ export const getAllActiveOpportunities = async () => {
 				opportunityOrigination.abi,
 				provider
 			);
+			
+			///////////
+			// Log the address of the contract
+			console.log(contract.address);
+
+
 
 			const count = await contract.getTotalOpportunities();
+			///////////
+			console.log(count.toString());
+
+
+
 			let opportunities = [];
 
 			for (let i = 0; i < count; i++) {
@@ -506,6 +517,9 @@ export const getAllActiveOpportunities = async () => {
 				}
 			}
 			return { opportunities, success: true };
+
+			///////////
+
 		}
 	} catch (error) {
 		Sentry.captureException(error);
